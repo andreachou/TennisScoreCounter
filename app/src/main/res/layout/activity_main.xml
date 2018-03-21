@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.tennisscorecounter.MainActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/tennis_court" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="104dp"
+                android:text="Player A"
+                android:textAllCaps="true"
+                android:textColor="#000000"
+                android:textSize="24sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/game_a_player"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textSize="40sp" />
+
+                <TextView
+                    android:id="@+id/score_a_player"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="4"
+                    android:gravity="start"
+                    android:text="0"
+                    android:textColor="@android:color/white"
+                    android:textSize="56sp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/challenge_a_player"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Challenges remaining: 3"
+                android:textColor="@android:color/holo_orange_light"
+                android:textSize="15sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="48dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:layout_marginRight="4dp"
+                    android:background="#4D000000"
+                    android:onClick="get15ForPlayerA"
+                    android:text="15"
+                    android:textColor="#FFFFFF" />
+
+                <Button
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:layout_marginLeft="4dp"
+                    android:background="#4D000000"
+                    android:onClick="get30ForPlayerA"
+                    android:text="30"
+                    android:textColor="#FFFFFF" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:layout_marginLeft="24dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:layout_marginRight="4dp"
+                    android:background="#4D000000"
+                    android:onClick="get40ForPlayerA"
+                    android:text="40"
+                    android:textColor="#FFFFFF" />
+
+                <Button
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:layout_marginLeft="4dp"
+                    android:background="#4D000000"
+                    android:onClick="getAdForPlayerA"
+                    android:text="AD"
+                    android:textColor="#FFFFFF" />
+            </LinearLayout>
+
+            <Button
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:layout_marginLeft="24dp"
+                android:background="#4D000000"
+                android:onClick="gameForPlayerA"
+                android:text="Game"
+                android:textColor="#FFFFFF" />
+
+            <Button
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:background="#4D000000"
+                android:onClick="challengeUsedForPlayerA"
+                android:text="Challenge"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="104dp"
+                android:text="Player B"
+                android:textAllCaps="true"
+                android:textColor="#000000"
+                android:textSize="24sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/score_b_player"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="4"
+                    android:gravity="end"
+                    android:text="0"
+                    android:textColor="@android:color/white"
+                    android:textSize="56sp" />
+
+                <TextView
+                    android:id="@+id/game_b_player"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textSize="40sp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/challenge_b_player"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Challenges remaining: 3"
+                android:textColor="@android:color/holo_orange_light"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginBottom="4dp"
+                android:layout_marginRight="24dp"
+                android:layout_marginTop="48dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:layout_marginRight="4dp"
+                    android:background="#4D000000"
+                    android:onClick="get15ForPlayerB"
+                    android:text="15"
+                    android:textColor="#FFFFFF" />
+
+                <Button
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:layout_marginLeft="4dp"
+                    android:background="#4D000000"
+                    android:onClick="get30ForPlayerB"
+                    android:text="30"
+                    android:textColor="#FFFFFF" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginBottom="4dp"
+                android:layout_marginRight="24dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:layout_marginRight="4dp"
+                    android:background="#4D000000"
+                    android:onClick="get40ForPlayerB"
+                    android:text="40"
+                    android:textColor="#FFFFFF" />
+
+                <Button
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:layout_marginLeft="4dp"
+                    android:background="#4D000000"
+                    android:onClick="getAdForPlayerB"
+                    android:text="AD"
+                    android:textColor="#FFFFFF" />
+            </LinearLayout>
+
+            <Button
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginBottom="4dp"
+                android:layout_marginRight="24dp"
+                android:background="#4D000000"
+                android:onClick="gameForPlayerB"
+                android:text="Game"
+                android:textColor="#FFFFFF" />
+
+            <Button
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginRight="24dp"
+                android:background="#4D000000"
+                android:onClick="challengeUsedForPlayerB"
+                android:text="Challenge"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="4dp"
+        android:background="#CC000000"
+        android:onClick="resetAll"
+        android:text="Reset"
+        android:textColor="@android:color/holo_orange_light" />
+
+</RelativeLayout>
